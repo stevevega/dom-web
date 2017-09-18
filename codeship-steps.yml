@@ -1,7 +1,7 @@
 - service: dom_web
   name: docker push latest
   type: push
-  image_name: huli/dom-web
+  image_name: stevevega/dom-web
   image_tag: latest
   tag: master
 
