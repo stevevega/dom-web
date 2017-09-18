@@ -18,6 +18,7 @@ if [ $? -eq 1 ]; then
         --detach=false \
         --name dom-web \
         --network dom \
+        --publish 80:8080 \
         --update-order 'start-first' \
         --replicas 4 \
         stevevega/dom-web:$tag \
@@ -28,6 +29,7 @@ else
         --detach=false \
         --force \
         --image stevevega/dom-web:$tag \
+        --publish 80:8080 \
         --update-order 'start-first' \
         dom-web \
     || { echo $0: Failed to update dom-web; exit 1; }
