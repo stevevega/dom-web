@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Huli - DevOps Meetup</title>
+        <link rel="shortcut icon" type="image/png" href="/img/favicon.ico">
+        <link rel="stylesheet" href="/css/vue-material.css">
+    </head>
+    <body>
+        <div id="app" style="background-color: #fff">
+            <md-toolbar style="background-color: #eee; border-bottom: 1px solid rgba(0,0,0,0.12);">
+                <img src="/img/meetup.svg" style="height: 40px;" alt="Meetup" />
+            </md-toolbar>
+
+            <div class="main-content" style="text-align: center;">
+                    <img src="/img/devops.jpeg" alt="DevOps" />
+                    <img src="/img/huli.png" alt="Huli" />
+            </div>
+
+            <form id="pform" novalidate v-on:submit.prevent="save">
+                <md-input-container v-bind:class="{ 'md-input-invalid': saveFailed }" style="margin: auto; width: 50%">
+                    <label>Registre su email</label>
+                    <md-input required v-model="email"></md-input>
+
+                    <span class="md-error">No se pudo registrar el participante</span>
+                </md-input-container>
+            </form>
+
+            <h2 style="margin: auto; padding-top: 20px; width: 50%">Participantes</h2>
+
+            <md-list style="margin: auto; width: 50%">
+                <md-list-item>steve.vega@hulilabs.com</md-list-item>
+                <md-list-item v-for="p in ps">{{ p }}</md-list-item>
+            </md-list>
+
+            </div>
+        </div>
+    <script src="/js/vue.min.js"></script>
+    <script src="/js/vue-material.js"></script>
+    <script src="/js/main.js"></script>
+    </body>
+</html>
