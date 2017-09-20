@@ -1,4 +1,4 @@
-Vue.use(VueMaterial)
+Vue.use(VueMaterial);
 
 var App = new Vue({
     el: '#app',
@@ -14,20 +14,20 @@ var App = new Vue({
     },
     methods: {
         getps: function() {
-            let that = this;
+            let that = this; // jshint ignore:line
             fetch('/api/list', {
                 method: 'get'
             }).then(function(response) {
-                return response.json()
+                return response.json();
             }).then(function(r) {
                 that.ps = r;
-                return r
+                return r;
             }).catch(function(err) {
-                console.log(err)
+                console.log(err);
             });
         },
         save: function() {
-            let that = this;
+            let that = this; // jshint ignore:line
 
             fetch('/api/save?email=' + that.email, {
                 method: 'post',
@@ -47,4 +47,4 @@ var App = new Vue({
             });
         }
     }
-})
+});
