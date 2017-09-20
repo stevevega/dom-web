@@ -8,5 +8,6 @@
 
 - service: deploy
   name: deploy
+  command: /bootstrap.sh
   tag: master
   encrypted_dockercfg_path: codeship-dockercfg.encrypted
