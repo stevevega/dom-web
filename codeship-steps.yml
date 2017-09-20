@@ -1,0 +1,12 @@
+- service: dom_web
+  name: docker push latest
+  type: push
+  image_name: stevevega/dom-web
+  image_tag: latest
+  tag: master
+  encrypted_dockercfg_path: codeship-dockercfg.encrypted
+
+- service: deploy
+  name: deploy
+  tag: master
+  encrypted_dockercfg_path: codeship-dockercfg.encrypted
