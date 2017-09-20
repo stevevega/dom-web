@@ -5,7 +5,7 @@ dom_web:
    cached: true
 
 deploy:
-    image: huli/deploy-ssh:latest
+    image: huli/deploy-ssh:amazon
     volumes:
         - ./deploy.sh:/deploy.sh
     encrypted_env_file: codeship-deploy.env.encrypted
