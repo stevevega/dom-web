@@ -1,3 +1,7 @@
+- service: jshint
+  name: jshint
+  command: js/main.js
+
 - service: dom_web
   name: docker push latest
   type: push
